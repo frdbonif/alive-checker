@@ -11,7 +11,7 @@ class Load:
 
     # Open 'settings.yaml' and output to dictonary 'config' and return that dict.
     def loadConfSafe():
-        with open("settings_new.yaml", 'r') as stream:
+        with open("settings.yaml", 'r') as stream:
             try:
                 config = yaml.safe_load(stream)
                 return config
