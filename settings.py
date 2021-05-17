@@ -1,6 +1,9 @@
 # `settings.py` v2.1.0 - The major version of this file must match the major
 # version of `setings.yaml`.
 
+# (C) 2021 Fred Boniface, distributed under the GPLv3 License, a copy of which
+# is included with this software.
+
 import yaml
 import logging
 

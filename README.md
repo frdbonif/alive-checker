@@ -4,7 +4,7 @@ alive-checker is a small, modular Python program that can be used to monitor, lo
 Development began on 15/05/2021.
 
 ## Licensing
-alive-checker (C) Fred Boniface 2021-
+(C) 2021 Fred Boniface, distributed under the GPLv3 License, a copy of which is included with this software.
 
 alive-checker is distributed under the GPLv3 license and is subject to all of it's terms, a copy of the license is available in this repository.
 

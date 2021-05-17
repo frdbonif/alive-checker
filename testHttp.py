@@ -1,6 +1,7 @@
 # test-http v0.0.1
-# This module is part of 'alive-checker' (c) 2021 Frederick Boniface.
-# This source code is distrubuted under the GNUv3 Lisence etc. etc.
+# This module is part of 'alive-checker'
+# (C) 2021 Fred Boniface, distributed under the GPLv3 License, a copy of which
+# is included with this software.
 
 # Provides functions to test HTTP(S) endpoints.
 # This module - test-http - consists of a single function that accepts two

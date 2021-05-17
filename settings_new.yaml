@@ -1,6 +1,9 @@
 # `settings.yaml` v2.0.1 - The major version of this file must match the major
 # version of `setings.py`.
 
+# (C) 2021 Fred Boniface, distributed under the GPLv3 License, a copy of which
+# is included with this software.
+
 checks:
   interval: 60  # Check interval in seconds.  default: 120
   reportHttpStatus: True  # Report HTTP Status code.  default: True
