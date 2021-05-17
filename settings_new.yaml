@@ -1,0 +1,40 @@
+# `settings.yaml` v2.0.1 - The major version of this file must match the major
+# version of `setings.py`.
+
+checks:
+  interval: 60  # Check interval in seconds.  default: 120
+  reportHttpStatus: True  # Report HTTP Status code.  default: True
+  httpDomains:  # List of HTTP(S) domains to be checked ^ WRITE LONGER DESCRIPTION ABOVE ^
+    'https://music.fjla.uk': '<title>Airsonic</title>'
+    'https://jf.fjla.uk': '<title>Jellyfin</title'
+    'https://nc.fjla.uk': '<title>Nextcloud</title>'
+  ldapsDomains:  # List of LDAPS domains to be checked.
+    - 'ldaps://ipa1.ds.fjla.uk'
+    - 'ldaps://ipa2.ds.fjla.uk'
+
+outputs:
+  enableJSON: True  # default: False
+  enableMail: False # default: False
+  enableTelegram: False # default: False
+
+http:
+  custom-headers:  # Custom headers in the format: key: 'value'.
+    userAgent: 'alive-checker_0.1.1/python'
+
+ldaps:
+  bindPath:
+  bindUser:
+  bindPass:
+
+mail:
+  smtpServer:
+  smtpUser:
+  smtpPass:
+  fromAddress:
+
+telegram:
+  user:
+  pass:
+
+json:
+  hideDomain:
