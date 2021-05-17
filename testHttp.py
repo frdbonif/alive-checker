@@ -24,31 +24,38 @@ from settings import Parse
 
 def get(url, requirement):
 
-    # Obtain 'http' settings from `Parse` in `settings.py`.  Then extract
-    # `custom-headers` from `http`.
-    conf = Parse.parseConf('http')
-    headers = conf.get('custom-headers')
+    try:
 
-    # Submit get request passing `url` from inputs, and the `headers` dict.
-    response = requests.get(url, headers)
+        # Obtain 'http' settings from `Parse` in `settings.py`.  Then extract
+        # `custom-headers` from `http`.
+        conf = Parse.parseConf('http')
+        headers = conf.get('custom-headers')
 
-    # This is the three digit status code which will later be returned to caller
-    print(response.status_code)
+        # Submit get request passing `url` from inputs, and the `headers` dict.
+        response = requests.get(url, headers)
 
-    # Search for `requirement` in the response, then evaluate the result, -1
-    # means not found, else the character position is returned.
-    requirementFind = response.text.find(requirement)
+        # This is the three digit status code which will later be returned to caller
+        print(response.status_code)
 
-    if requirementFind != -1:
-        requirementMet = True
-    else:
-        requirementMet = False
+        # Search for `requirement` in the response, then evaluate the result, -1
+        # means not found, else the character position is returned.
+        requirementFind = response.text.find(requirement)
 
-    # This is the result of the `requirement` test.
-    print(requirementMet)
+        if requirementFind != -1:
+            requirementMet = True
+        else:
+            requirementMet = False
 
-    # return the testing results.  Maybe change the order?  Reachable,Status-Code,RequirementTest may be better.
-    return response.status_code, "unknown", requirementMet
+            # This is the result of the `requirement` test.
+            print(requirementMet)
+
+            # return the testing results.  Maybe change the order?  Reachable,Status-Code,RequirementTest may be better.
+            return response.status_code, True, requirementMet
+
+    # If the codeblock fails, then return "unknown" statuses and FALSE
+    # connection test.
+    except:
+        return "unknown", False, "unknown"
 
 
     # NEXT STEPS:
