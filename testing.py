@@ -8,8 +8,11 @@ import yaml
 
 from settings import Parse
 import testHttp
+import testLdaps
 
 testfor = '<link rel="stylesheet" href="/index.php/apps/theming'
 t = testHttp.get("https://nc.fjla.uk", testfor)
 print("\n")
 print(t)
+
+l = testLdaps.tryLdap("ipa1.ds.fjla.uk")

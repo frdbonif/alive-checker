@@ -26,8 +26,8 @@ http:
 
 ldaps:
   bindPath:
-  bindUser:
-  bindPass:
+  bindUser: 'X'
+  bindPass: '****'
 
 mail:
   smtpServer:
