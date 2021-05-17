@@ -36,8 +36,8 @@ mail:
   fromAddress:
 
 telegram:
-  user:
-  pass:
+  chatID:
+  botAPIKey:
 
 json:
   hideDomain:
