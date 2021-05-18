@@ -25,8 +25,8 @@ http:
     userAgent: 'alive-checker_0.1.1/python'
 
 ldaps:
-  bindPath: "cn=user, dn=example, dn=com"
   bindUser: 'cn=jade'
+  userPath: "cn=user, dn=example, dn=com"
   bindPass: '****'
 
 mail:
