@@ -22,7 +22,7 @@ alive-checker contains the following modules.  All of which are currently under 
  - `testLdaps.py` - this module runs tests against LDAPS services.
  - `outputs.py` - this module parses all of the collected data and directs it to enabled output modules.
  - `outMail.py` - this module sends notifications via email.
- - `outTelegram.py` - this module sends notifications via telegram.
+ - ~~outTelegram.py~~ - It has been decided to remove the outTelegram module due to the requirement to run a complete Telegram Bot within alive-checker, instead I will write a separate bot that can accept the JSON/CSV output of this program.
  - `outJson.py` - this module outputs data to a static JSON file.
 
 All of these modules are managed by `main.py`.
