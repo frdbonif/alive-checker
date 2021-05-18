@@ -62,6 +62,6 @@ def get(url, requirement):
     # NEXT STEPS:
     # - DONE...Parse HTTP Status code from `response`.
     # - DONE...Search `response.text` for `requirement`.
-    # - Wrap the main contents into a try except block which will be able to return a FALSE if URL is not reachable.
-    # - Return `result` as tuple containing `status`, `boolean - reachable`,
+    # - DONE...Wrap the main contents into a try except block which will be able to return a FALSE if URL is not reachable.
+    # - DONE...Return `result` as tuple containing `status`, `boolean - reachable`,
     #   `boolean - requirement test passed`

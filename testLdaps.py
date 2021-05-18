@@ -1,5 +1,7 @@
 # Provides functions to test LDAPS endpoints.
 
+# Module Version 0.0.1
+
 # (C) 2021 Fred Boniface, distributed under the GPLv3 License, a copy of which
 # is included with this software.
 
@@ -10,17 +12,21 @@ from settings import Parse
 
 def tryLdap(url):
 
-    try:
+#    try:
 
         # Get LDAP settings from settings.Parse and separate User & Pass
         conf = Parse.parseConf('ldaps')
         ldapUser = conf.get('bindUser')
         ldapPass = conf.get('bindPass')
+        ldapBase = conf.get('bindPath')
+        ldapLogin = ldapUser + ", " + ldapBase
+        print(ldapBase)
+        print(ldapLogin)
 
         # Connect and bind to LDAPS
-        connect = ldap.initialize(url)
-        connect.set_option(ldap.OPT_REFERRALS, 0)
-        connect.simple_bind_s(ldapUser, ldapPass)
+#        connect = ldap.initialize(url)
+#        connect.set_option(ldap.OPT_REFERRALS, 0)
+#        connect.simple_bind_s(ldapUser, ldapPass)
 
         print(conf)
         print("\n")
@@ -29,6 +35,5 @@ def tryLdap(url):
 
         return "Done"
 
-    except:
-        print("Failed")
-        return "Fail"
+#    except:
+#        return "Fail"

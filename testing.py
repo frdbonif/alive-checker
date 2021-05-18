@@ -16,3 +16,4 @@ print("\n")
 print(t)
 
 l = testLdaps.tryLdap("ipa1.ds.fjla.uk")
+print(l)
