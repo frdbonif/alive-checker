@@ -1,6 +1,6 @@
 # Provides functions to test LDAPS endpoints.
 
-# Module Version 0.0.1
+# Module Version 0.1.0
 
 # (C) 2021 Fred Boniface, distributed under the GPLv3 License, a copy of which
 # is included with this software.
@@ -18,7 +18,7 @@ def tryLdap(url):
         conf = Parse.parseConf('ldaps')
         ldapUser = conf.get('bindUser')
         ldapPass = conf.get('bindPass')
-        ldapBase = conf.get('bindPath')
+        ldapBase = conf.get('userPath')
         ldapLogin = ldapUser + ", " + ldapBase
         print(ldapBase)
         print(ldapLogin)
